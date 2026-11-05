@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TechnoPlus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#inicio" class="logo">TechnoPlus</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio" class="hero">
+
+        <div class="contenido">
+
+            <h1>Aprende Desarrollo Web</h1>
+
+            <p>
+                Domina HTML, CSS y JavaScript
+                desde cero.
+            </p>
+
+            <button onclick="mostrarMensaje()">
+                Comenzar
+            </button>
+
+            <p id="mensaje"></p>
+
+        </div>
+
+    </section>
+
+    <section id="servicios" class="servicios">
+        <h2>Nuestros servicios</h2>
+
+        <div class="contenedor-tarjetas">
+
+            <article class="tarjeta">
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600"
+                    alt="Desarrollo de sitios web">
+
+                <div class="tarjeta-contenido">
+                    <h3>Desarrollo Web</h3>
+                    <p>
+                        Creamos sitios web modernos, atractivos y adaptables
+                        a computadoras y celulares.
+                    </p>
+                    <button onclick="saberMas('Desarrollo Web')">
+                        Saber más
+                    </button>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img
+                    src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600"
+                    alt="Soporte técnico informático">
+
+                <div class="tarjeta-contenido">
+                    <h3>Soporte Técnico</h3>
+                    <p>
+                        Ofrecemos mantenimiento preventivo y correctivo
+                        para equipos informáticos.
+                    </p>
+                    <button onclick="saberMas('Soporte Técnico')">
+                        Saber más
+                    </button>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <img
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600"
+                    alt="Infraestructura de redes">
+
+                <div class="tarjeta-contenido">
+                    <h3>Redes</h3>
+                    <p>
+                        Diseñamos, instalamos y configuramos redes
+                        informáticas para empresas.
+                    </p>
+                    <button onclick="saberMas('Redes')">
+                        Saber más
+                    </button>
+                </div>
+            </article>
+
+        </div>
+
+        <p id="resultado2" class="resultado"></p>
+        <h1>Galería</h1>
+
+        <div class="slider">
+
+            <img
+            id="imagen"
+            src="https://picsum.photos/id/10/600/300"
+            alt="Imagen de la galería">
+
+        </div>
+
+        <div class="botones">
+
+            <button onclick="anterior()">
+                Anterior
+            </button>
+
+            <button onclick="siguiente()">
+                Siguiente
+            </button>
+
+        </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+        <h2>Sobre nosotros</h2>
+        <p>
+            Somos un equipo dedicado a brindar soluciones tecnológicas
+            que facilitan el trabajo y mejoran los procesos de las empresas.
+        </p>
+    </section>
+
+    
+    <section id="contacto" class="form-container">
+        <h1>Contacto</h1>
+
+        <form onsubmit="return validar()">
+
+            <input type="text" id="nombre" placeholder="Nombre">
+
+            <br><br>
+
+            <input type="email" id="correo" placeholder="Correo">
+
+            <br><br>
+
+            <textarea id="mensajeContacto" placeholder="Mensaje"></textarea>
+
+            <br><br>
+
+        <button type="submit">
+            Enviar
+        </button>
+
+        </form>
+
+        <p id="resultado" class="resultado"></p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+
+            <div class="footer-info">
+                <h3>TechnoPlus</h3>
+                <p>
+                    Soluciones tecnológicas para impulsar tu negocio.
+                </p>
+            </div>
+
+            <div class="footer-enlaces">
+                <h3>Enlaces rápidos</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook">
+                        <span class="material-icons">facebook</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <span class="material-icons">photo_camera</span>
+                    </a>
+
+                    <a href="https://www.youtube.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube">
+                        <span class="material-icons">smart_display</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <span class="material-icons">work</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-final">
+            <p>
+                &copy; 2026 TechnoPlus. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
